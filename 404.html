@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BoopFace</title>
+<meta name="robots" content="noindex">
+<script>
+  // Agent Robot Avatar was renamed to BoopFace; its pages moved from
+  // /agent-robot-avatar/ to /boopface/. Keep the rest of the path, the query and the hash.
+  (function () {
+    var old = '/agent-robot-avatar';
+    var p = location.pathname;
+    if (p === old || p.indexOf(old + '/') === 0) {
+      location.replace('/boopface' + p.slice(old.length) + location.search + location.hash);
+    }
+  })();
+</script>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;font:16px/1.6 system-ui,sans-serif;background:#f6f7f8;color:#202327}a{color:#202327}</style>
+</head>
+<body>
+<p>Page not found. Agent Robot Avatar is now <a href="/boopface/">BoopFace</a>.</p>
+</body>
+</html>
